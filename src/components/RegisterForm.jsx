@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 function RegisterForm() {
   const { user, handleChange, handleRegister } = useAppContext();
   return (
-    <div className="container sm:max-w-md">
+    <div className="sm:max-w-md container mx-auto">
       <form
         onSubmit={(e) => handleRegister(e)}
-        className="bg-white p-5 rounded shadow-md"
+        className="p-5 bg-white rounded shadow-md"
       >
-        <label htmlFor="email" className="text-xl sm:text-2xl">
+        <label htmlFor="email" className="sm:text-2xl text-xl">
           Email
           <input
             type="email"
@@ -20,10 +20,10 @@ function RegisterForm() {
             required
             value={user.email}
             onChange={(e) => handleChange(e)}
-            className="w-full border py-2 px-3 mt-1 shadow text-lg sm:text-xl rounded"
+            className="sm:text-xl w-full px-3 py-2 mt-1 text-lg border rounded shadow"
           />
         </label>
-        <label htmlFor="password" className="text-xl sm:text-2xl my-5 block">
+        <label htmlFor="password" className="sm:text-2xl block my-5 text-xl">
           Password
           <input
             type="password"
@@ -33,14 +33,14 @@ function RegisterForm() {
             required
             value={user.password}
             onChange={(e) => handleChange(e)}
-            className="w-full border py-2 px-3 mt-1 shadow text-lg sm:text-xl rounded"
+            className="sm:text-xl w-full px-3 py-2 mt-1 text-lg border rounded shadow"
           />
         </label>
         <button className="bg-blue-600 text-white py-1.5 px-4 rounded text-lg sm:text-xl hover:bg-blue-500 transition-colors inline-block">
           Register
         </button>
       </form>
-      <div className="my-5 flex justify-between items-center text-lg sm:text-xl">
+      <div className="sm:text-xl flex items-center justify-between my-5 text-lg">
         <h3>Already have an Account?</h3>
         <Link
           to="/login"

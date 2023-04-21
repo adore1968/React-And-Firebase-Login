@@ -12,8 +12,8 @@ function Alert({ error }) {
   }, []);
 
   return (
-    <div className="bg-red-100 border-red-500 border p-2 text-center text-red-500 mb-1.5">
-      <p className="text-lg sm:text-xl">{error.message}</p>
+    <div className="bg-red-100 border-red-500 border p-2 text-red-500 mb-1.5 sm:max-w-md container text-center">
+      <p className="sm:text-xl text-lg">{error.message}</p>
     </div>
   );
 }

@@ -6,9 +6,11 @@ import Alert from "../components/Alert";
 function Register() {
   const { error } = useAppContext();
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      {error.show && <Alert error={error} />}
-      <RegisterForm />
+    <div className="flex items-center justify-center min-h-screen">
+      <div>
+        {error.show && <Alert error={error} />}
+        <RegisterForm />
+      </div>
     </div>
   );
 }
